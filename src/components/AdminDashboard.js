@@ -19,7 +19,7 @@ const AdminDashboard = () => {
     setLoading(true);
     setError(null); // Clear previous errors
     try {
-      const res = await fetch("http://localhost:5000/api/admin/coupons", {
+      const res = await fetch("https://round-robin-backend-liard.vercel.app/api/admin/coupons", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -50,7 +50,7 @@ const AdminDashboard = () => {
     setLoading(true);
     setError(null); // Clear previous errors
     try {
-      const res = await fetch("http://localhost:5000/api/coupons", {
+      const res = await fetch("https://round-robin-backend-liard.vercel.app/api/coupons", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

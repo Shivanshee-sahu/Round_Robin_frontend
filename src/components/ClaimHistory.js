@@ -19,7 +19,7 @@ const ClaimHistory = () => {
 
     const fetchClaims = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/admin/claims", {
+        const res = await fetch("https://round-robin-backend-liard.vercel.app/api/admin/claims", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

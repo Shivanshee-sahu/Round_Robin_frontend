@@ -7,7 +7,7 @@ const ManageCoupons = () => {
   const [newCoupon, setNewCoupon] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/admin/coupons", {
+    fetch("https://round-robin-backend-liard.vercel.app/api/admin/coupons", {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())
@@ -17,7 +17,7 @@ const ManageCoupons = () => {
   const addCoupon = async () => {
     if (!newCoupon) return;
 
-    const res = await fetch("http://localhost:5000/api/admin/coupons", {
+    const res = await fetch("https://round-robin-backend-liard.vercel.app/api/admin/coupons", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

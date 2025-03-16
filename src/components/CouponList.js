@@ -18,7 +18,7 @@ const CouponList = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("http://localhost:5000/api/admin/coupons", { // Corrected endpoint
+      const res = await fetch("https://round-robin-backend-liard.vercel.app/api/admin/coupons", { // Corrected endpoint
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -49,7 +49,7 @@ const CouponList = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("http://localhost:5000/api/coupons", {
+      const res = await fetch("https://round-robin-backend-liard.vercel.app/api/coupons", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const CouponList = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/coupons/${editCoupon._id}`, // Corrected endpoint
+        `https://round-robin-backend-liard.vercel.app/api/coupons/${editCoupon._id}`, // Corrected endpoint
         {
           method: "PUT",
           headers: {
@@ -111,7 +111,7 @@ const CouponList = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`http://localhost:5000/api/admin/coupons/${id}`, { // Corrected endpoint
+      const res = await fetch(`https://round-robin-backend-liard.vercel.app/api/admin/coupons/${id}`, { // Corrected endpoint
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -134,7 +134,7 @@ const CouponList = () => {
     setError(null);
     try {
       const res = await fetch(
-        `http://localhost:5000/api/coupons/${id}/availability`, 
+        `https://round-robin-backend-liard.vercel.app/api/coupons/${id}/availability`, 
         {
           method: "PUT",
           headers: {

@@ -22,7 +22,7 @@ const ClaimCoupon = () => {
     setRolling(true); // Start rolling animation
 
     try {
-      const response = await fetch('http://localhost:5000/api/coupons/claim');
+      const response = await fetch('https://round-robin-backend-liard.vercel.app/api/coupons/claim');
 
       if (!response.ok) {
         const errorData = await response.json();
