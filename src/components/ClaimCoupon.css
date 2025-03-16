@@ -1,0 +1,153 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fc;
+}
+.go-back-button {
+    position: fixed; /* Changed to fixed positioning */
+    top: 20px;
+    right: 20px;
+    width: 10%;
+    background-color: #0f3460;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+  
+  .go-back-button:hover {
+    background-color: #1c5a91;
+  }
+.claim-coupon-container {
+  text-align: center;
+  
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color:#0f3460; /* Secondary color */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.claim-coupon-container h1 {
+align-items: flex-start;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  color: white; /* Primary color */
+}
+
+.claim-coupon-button {
+  padding: 12px 25px;
+  width: auto;
+  background: linear-gradient(135deg, #0f3460, #1c5a91);  color: white; /* Secondary color */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.claim-coupon-button:hover {
+  background: #1c5a91; /* Slightly lighter primary color on hover */
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.success-message {
+  margin-top: 30px;
+  color: #28a745;
+  background-color: #e8f5e9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-size: 1.1rem;
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error-message {
+  margin-top: 30px;
+  color: #dc3545;
+  background-color: #f8d7da;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rolling-wheel {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #0f3460; /* Primary color */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+  margin-right: 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  color: #0f3460; /* Primary color */
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .claim-coupon-container {
+    padding: 30px;
+    width: 95%;
+  }
+
+  .claim-coupon-button {
+    font-size: 16px;
+  }
+
+  .success-message,
+  .error-message {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
